@@ -1,7 +1,7 @@
 const correctAnswers = ["B","A","A","B"];
 const form = document.querySelector('.quiz-form');
 const result = document.querySelector(".result");
-
+const subHead = document.querySelector("#subHead");
 form.addEventListener('submit',e=>{
     e.preventDefault();
     let score = 0;
@@ -15,8 +15,10 @@ form.addEventListener('submit',e=>{
     // console.log(score)
     // result.document.querySelector("span").textContent=`${score}%`; // BIG MISTAKE :)
     scrollTo(0,0);
+    subHead.classList.add("d-none");
     // result.querySelector('span').textContent=`${score}%`
     result.classList.remove("d-none");
+
 
     let fscore = 0;
     let scoreAnimator = setInterval(()=>{
